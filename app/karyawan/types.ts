@@ -25,6 +25,7 @@ export interface KeretaType {
     wagon_id: number
     createdAt: string
     updatedAt: string
+    used?: boolean
   }
   
   export interface UserType {
@@ -49,4 +50,39 @@ export interface KeretaType {
     createdAt: string
     updatedAt: string
   }
-  
+
+  export interface ScheduleType{
+    id: number
+    departured_location: string
+    departured_time: string
+    arrived_location: string
+    arrived_time: string
+    train_id: number
+    price: number
+    app_user_token: string
+    createdAt: string
+    updatedAt: string
+    train_details: KeretaType
+  }
+
+  export interface Purchase {
+    id: number
+    purchase_id: number
+    passanger_id: string
+    passanger_name: string
+    seat_number: string
+    createdAt: string
+    updatedAt: string
+  }
+
+  export interface History {
+    id: number;
+    purchase_date: string; 
+    customer_id: number;
+    schedule_id: number;
+    app_user_token: string;
+    createdAt: string; 
+    updatedAt: string;
+    purchases_details: Purchase[]
+    schedule_details: ScheduleType
+}
