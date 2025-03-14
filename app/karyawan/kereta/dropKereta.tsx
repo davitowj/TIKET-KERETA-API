@@ -84,7 +84,7 @@ const DropKereta = (myProps: props) => {
                 <form onSubmit={e => handleSubmit(e)}>
                     {/* modal header */}
                     <div className="w-full p-3 rounded-t-lg">
-                        <h1 className="font-semibold text-lg ">Edit Data Kereta</h1>
+                        <h1 className="font-semibold text-lg ">Hapus Data Kereta</h1>
                         <span className="text-sm text-slate-500">
                             Pastikan Data Yang Diisi Sudah Benar
                         </span>
