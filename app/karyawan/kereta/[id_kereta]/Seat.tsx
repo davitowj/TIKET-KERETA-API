@@ -1,18 +1,32 @@
-import { KursiType } from "../../types"
+import React from "react";
+import { KursiType} from "../../types";
+import Editseat from "./editSeat";
+import Deleteseat from "./dropSeat";
 
-type props = {
-    item: KursiType
+interface props {
+  item: KursiType;
 }
-
-const Seat = (myProp: props) => {
-    return (
-        <div className="size-12 rounded-sm flex items-center justify-center bg-sky-700 ">
-            <span className="text-white font-semibold">
-                {myProp.item.seat_number}
-            </span>
-
+const Seat = (myprops: props) => {
+  return (
+    <div className="size-24 rounded-lg flex flex-col items-center justify-center bg-sky-700">
+      <div className="flex justify-between mt-[-2rem] gap-[10px]">
+        <div>
+          <Editseat
+            seatId={myprops.item.id}
+            seatName={myprops.item.seat_number}
+          />
         </div>
-    )
-}
+        <div>
+          <Deleteseat seatId={myprops.item.id} />
+        </div>
+      </div>
+      <div>
+        <span className="text-white font-semibold">
+          {myprops.item.seat_number}
+        </span>
+      </div>
+    </div>
+  );
+};
 
-export default Seat
+export default Seat;

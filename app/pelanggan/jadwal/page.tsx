@@ -5,11 +5,11 @@ import { ScheduleType } from "@/app/karyawan/types"
 import Schedule from "./Schedule"
 
 type Props = {
-    searchParams: {
+    searchParams: Promise<{
         departured_location?: string
         arrived_location ?: string
 
-    }
+    }>
 }
 
 // Get data jadwal
