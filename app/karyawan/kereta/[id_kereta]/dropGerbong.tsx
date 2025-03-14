@@ -86,7 +86,7 @@ const DropGerbong = (myProp: props) => {
             <form onSubmit={e => handleSubmit(e)}>
                     {/* modal header */}
                     <div className="w-full p-3 rounded-t-lg">
-                        <h1 className="font-semibold text-lg ">Edit Data Gerbong</h1>
+                        <h1 className="font-semibold text-lg ">Drop Data Gerbong</h1>
                         <span className="text-sm text-slate-500">
                             Pastikan Data Yang Diisi Sudah Benar
                         </span>
